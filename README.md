@@ -96,7 +96,7 @@ Below is an example of a configuration which sets the defaults.
     import subprocess
     def update_text(text):
         # Get first line
-        first_line = text.splitline()[:-1]
+        first_line = text.splitlines()[0] if text else ''
         subprocess.call(["xsetroot", "-name", first_line])
 
 ## Possible errors
